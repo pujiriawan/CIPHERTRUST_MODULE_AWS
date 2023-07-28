@@ -12,7 +12,7 @@ resource "aws_instance" "ciphertrust_aws" {
     vpc_security_group_ids = [aws_security_group.ciphertust_network_firewall.id]
     subnet_id = aws_subnet.ciphertust_network_public_subnet.id
     tags = {
-            Name = "${var.aws_region}-${var.name_instance}"
+            Name = "${var.aws_region}-${var.infra_env}-${var.project_name}-${var.name_instance}"
             Project     = var.project_name
             Environment = var.infra_env
             ManagedBy   = "terraform"

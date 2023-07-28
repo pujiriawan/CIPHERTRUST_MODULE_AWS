@@ -1,0 +1,47 @@
+variable "aws_region" {
+    description = "Region Thales CipherTrust Manager will be deployed in."
+    type = string
+    default = ""
+}
+
+#variable "aws_access_id" {
+#     description = "Access Key ID"
+#     type = string
+#}
+#
+#variable "aws_access_secret" {
+#     description = "Access Key Secret"
+#     type = string
+# }
+
+variable "ciphertrust_ami_id" {
+    description = "Put AMI ID you get from AWS Marketplace"
+    type = string
+    default = ""
+
+}
+
+variable "name_instance" {
+    description = "Name of intance ciphertrust manager"
+    type = string
+    default = ""
+  
+}
+
+variable "infra_env" {
+    description = "Name of environment CM"
+    type = string
+    default = ""
+}
+
+variable "project_name" {
+    description = "Name of Project"
+    type = string
+    default = ""
+}
+
+variable "script_path_ansible" {
+    type = string
+    description = "this is script for ansible"
+    default = ""
+}

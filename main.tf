@@ -27,8 +27,8 @@ resource "aws_instance" "ciphertrust_aws" {
 # Generate Ciphertrust Connection node for ansible
 resource "local_file" "connection_node" {
 depends_on = [aws_instance.ciphertrust_aws]
- filename = "./Users/noni_princess/Documents/Information Security/Develop-Curriculum-Security-Engineer/06-DevSecOps/Configuration-Management/vars/nodeConnection.yml"
- content = <<EOF
+filename = "./Users/noni_princess/Documents/Information Security/Develop-Curriculum-Security-Engineer/06-DevSecOps/Configuration-Management/vars/nodeConnection.yml"
+content = <<EOF
 this_node_address: ${aws_instance.ciphertrust_aws.public_ip}
 this_node_private_ip: ${aws_instance.ciphertrust_aws.public_ip}
 this_node_username: admin

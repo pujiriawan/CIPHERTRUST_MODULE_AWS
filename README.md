@@ -3,7 +3,9 @@
 <!-- BEGIN_AUTOMATED_TF_DOCS_BLOCK -->
 ## Requirements
 
-No requirements.
+| Name | Version |
+|------|---------|
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 4.0 |
 ## Usage
 Basic usage of this module is as follows:
 ```hcl
@@ -11,8 +13,10 @@ module "example" {
 	 source  = "<module-path>"
 
 	 # Optional variables
+	 aws_profile  = ""
 	 aws_region  = ""
 	 ciphertrust_ami_id  = ""
+	 file_path  = ""
 	 infra_env  = ""
 	 name_instance  = ""
 	 project_name  = ""
@@ -38,8 +42,10 @@ module "example" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_aws_profile"></a> [aws\_profile](#input\_aws\_profile) | Region Thales CipherTrust Manager will be deployed in. | `string` | `""` | no |
 | <a name="input_aws_region"></a> [aws\_region](#input\_aws\_region) | Region Thales CipherTrust Manager will be deployed in. | `string` | `""` | no |
 | <a name="input_ciphertrust_ami_id"></a> [ciphertrust\_ami\_id](#input\_ciphertrust\_ami\_id) | Put AMI ID you get from AWS Marketplace | `string` | `""` | no |
+| <a name="input_file_path"></a> [file\_path](#input\_file\_path) | location of file path connection setting for cm | `string` | `""` | no |
 | <a name="input_infra_env"></a> [infra\_env](#input\_infra\_env) | Name of environment CM | `string` | `""` | no |
 | <a name="input_name_instance"></a> [name\_instance](#input\_name\_instance) | Name of intance ciphertrust manager | `string` | `""` | no |
 | <a name="input_project_name"></a> [project\_name](#input\_project\_name) | Name of Project | `string` | `""` | no |

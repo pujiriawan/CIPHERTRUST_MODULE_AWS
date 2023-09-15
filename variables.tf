@@ -4,6 +4,12 @@ variable "aws_region" {
     default = ""
 }
 
+variable "aws_profile" {
+    description = "Region Thales CipherTrust Manager will be deployed in."
+    type = string
+    default = ""
+}
+
 #variable "aws_access_id" {
 #     description = "Access Key ID"
 #     type = string
